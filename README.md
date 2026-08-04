@@ -1,0 +1,1 @@
+This git repo is created for version controlling the developments within the DARE European research project, with the focus on cache coherency, at Chalmers.
