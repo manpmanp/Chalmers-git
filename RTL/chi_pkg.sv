@@ -298,5 +298,5 @@ module chi_pkg_check;
         $display("CHI package consistency checks passed.");
 
     end
-    
+
 endmodule
