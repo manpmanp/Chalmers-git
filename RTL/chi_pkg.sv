@@ -36,13 +36,13 @@ localparam int RAW = 44; // Req_Addr_Width (RAW)= 44 to 52
 localparam int M = 12;    // M = 0 (no MPAM bus)  or M = 12, 15
 localparam int PB = 4;   // PB = 0 (no PBHA bus) or PB = 4
 localparam int E = 16;    // E = 0 (no MECID bus) or E = 16 (for RME-MEC) 
-localparam int R = 16;    // R = 0 (no StreamID bus) or R = 16 
+localparam int R = 16;                 // R = 0 (no StreamID bus) or R = 16 
 localparam int E_R = (E > R) ? E : R;  // Max(E,R)
-localparam int S = 1;    // S = 0 (no SecSID1 bit) or 1 (for RME-CDA)
-localparam int Y = 32;    // Y = 0 (no RSVDC bus) or Y = 4, 8, 12, 16, 24, 32 (Width determined by Req_RSVDC_Width)
-localparam int SAW = RAW - 3; // 41 to 49
-localparam int DC = 0; // DC = 0 or DW/8
-localparam int POIS = 0; // POIS = 0 or DW/64
+localparam int S = 1;          // S = 0 (no SecSID1 bit) or 1 (for RME-CDA)
+localparam int Y = 32;         // Y = 0 (no RSVDC bus) or Y = 4, 8, 12, 16, 24, 32 (Width determined by Req_RSVDC_Width)
+localparam int SAW = RAW - 3;  // 41 to 49
+localparam int DC = DW/8;      // DC = 0 or DW/8
+localparam int POIS = DW/64;   // POIS = 0 or DW/64
 
 localparam int REQ_FLIT_FIXED_W = 4 + NID_W + NID_W + 12 + NID_W + 1 + 12 + 7 + 1 + 6 + 3 + 1 + 1 + 2 + 4 + 4 + 1 + 8 + 1 + 1 + 2 + 1; // 93 to 120
 localparam int RESP_FLIT_FIXED_W = 4 + NID_W + NID_W + 12 + 5 + 2 + 3 + 3 + 3 + 12 + 4 + 2 + 1 + 6; // 71 to 89
