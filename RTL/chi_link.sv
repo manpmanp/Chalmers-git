@@ -22,5 +22,3 @@ import chi_pkg::*;
 );
 
 endmodule
-
-
